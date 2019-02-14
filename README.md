@@ -1,5 +1,17 @@
 # The Modern C++ Challenge
 This is the code repository for [The Modern C++ Challenge](https://www.packtpub.com/application-development/modern-c-challenge?utm_source=github&utm_medium=repository&utm_campaign=9781788993869), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
+
+## 頑張るぞい
+```
+$ cp -Rv build_test build
+$ cd build
+$ #command.txtの中身のコマンドを実行し、VisualStudioのソリューションファイル作成
+$ ......
+```
+
+enjoy!
+
+
 ## About the Book
 C++ is one of the most widely-used programming languages and has applications in a variety of fields, such as gaming, GUI programming, and operating systems, to name a few. Through the years, C++ has evolved into (and remains) one of the top choices for software developers worldwide. This book will show you some notable C++ features and how to implement them to meet your application needs. Each problem is unique and doesn't just test your knowledge of the language; it tests your ability to think out of the box and come up with the best solutions. With varying levels of difficulty, you'll be faced with a wide variety of challenges. And in case you're stumped, you don't have to worry: we've got the best solutions to the problems in the book. So are you up for the challenge?
 
