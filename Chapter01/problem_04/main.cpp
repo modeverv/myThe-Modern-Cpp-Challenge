@@ -1,5 +1,10 @@
 #include <iostream>
 
+/*
+ 与えられた正の整数より小さい最大の素数
+ 与えられた正の整数より小さい最大の素数を計算して出力するプログラムを書きなさ
+ い。
+ */
 bool is_prime(int const num)
 {
    if (num <= 3)

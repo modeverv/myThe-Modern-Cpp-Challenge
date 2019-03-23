@@ -2,6 +2,7 @@
 #include <string_view>
 #include <regex>
 #include <assert.h>
+#include <iostream>
 
 #ifdef USE_BOOST_OPTIONAL
 #  include <boost/optional.hpp>
@@ -56,6 +57,7 @@ int main()
    assert(p1->protocol == "https");
    assert(p1->domain == "packt.com");
    assert(!p1->port);
+   std::cout << p1->domain;
    assert(!p1->path);
    assert(!p1->query);
    assert(!p1->fragment);

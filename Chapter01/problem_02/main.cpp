@@ -1,5 +1,24 @@
 #include <iostream>
 
+/*
+
+ 最大公約数
+ 与えられた2個の正の整数の最大公約数を計算して出力するプログラムを書きなさ
+ い。
+ */
+
+unsigned int gcd(unsigned int a,unsigned int b)
+{
+  if(b == 0){
+    return a;
+  }
+  return gcd(b, a % b);
+}
+int main()
+{
+  std::cout << gcd(100,34) << std::endl;
+}
+/*
 unsigned int gcd(unsigned int const a, unsigned int const b)
 {
    return b == 0 ? a : gcd(b, a % b);
@@ -32,3 +51,4 @@ int main()
       << "    gcd(" << a << ", " << b << ")="
       << gcd2(a, b) << std::endl;
 }
+*/
