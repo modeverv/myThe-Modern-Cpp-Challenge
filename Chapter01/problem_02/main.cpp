@@ -36,8 +36,25 @@ unsigned int gcd2(unsigned int a, unsigned int b)
    return a;
 }
 
+unsigned int mygcd(unsigned int a, unsigned int b)
+{
+	if (b == 0) {
+		return a;
+	}
+	else {
+		return mygcd(b, a % b);
+	}
+}
+
+
 int main()
 {
+	unsigned int a = 10, b = 5;
+    unsigned int x = mygcd(a, b);
+	std::cout << x << std::endl;
+
+
+	/*
    std::cout << "Input numbers:";
 
    unsigned int a, b;
@@ -50,5 +67,6 @@ int main()
    std::cout
       << "    gcd(" << a << ", " << b << ")="
       << gcd2(a, b) << std::endl;
+	  */
 }
 */
