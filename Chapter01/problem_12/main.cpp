@@ -1,6 +1,12 @@
 #include <iostream>
 #include <vector>
 
+/*
+ 最長コラッツ数列
+ 100万までの数で、最長コラッツ数列になる数とその数列の長さを求めるプログラム
+ を書きなさい。
+ */
+
 std::pair<unsigned long long, long> longest_collatz_uncached(unsigned long long const limit)
 {
    long length = 0;

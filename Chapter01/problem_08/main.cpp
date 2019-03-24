@@ -4,6 +4,12 @@
 #include <cmath>
 #include <chrono>
 
+/*
+ アームストロング数
+ 3桁のアームストロング数（ナルシシスト数）を出力するプログラムを書きなさい。
+ */
+// ref https://qiita.com/hal1437/items/b6deb22a88c76eeaf90c
+
 template <typename Time = std::chrono::microseconds,
    typename Clock = std::chrono::high_resolution_clock>
    struct perf_timer

@@ -2,6 +2,10 @@
 #include <string>
 #include <vector>
 
+/*
+ ローマ数字に変換
+ 与えられた数をローマ数字で表して出力するプログラムを書きなさい。
+ */
 std::string to_roman(unsigned int value)
 {
    std::vector<std::pair<unsigned int, char const*>> roman
@@ -34,10 +38,11 @@ int main()
    {
       std::cout << i << "\t" << to_roman(i) << std::endl;   
    }
-
+/*
    int number = 0;
    std::cout << "number:";
    std::cin >> number;
 
    std::cout << to_roman(number) << std::endl;
+*/
 }

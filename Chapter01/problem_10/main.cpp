@@ -2,6 +2,12 @@
 #include <bitset>
 #include <string>
 
+/*
+ グレイコード
+ 2進表記で5ビットのすべての数について、2進表現、グレイコード表現、グレイコー
+ ド復号値を出力するプログラムを書きなさい。
+ */
+
 unsigned int gray_encode(unsigned int const num)
 {
    return num ^ (num >> 1);

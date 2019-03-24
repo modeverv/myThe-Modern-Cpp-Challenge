@@ -1,5 +1,11 @@
 #include <iostream>
 
+/*
+ セクシー素数
+ 与えられた上限までのセクシー素数（差が6の素数の組）をすべて出力するプログラ
+ ムを書きなさい。
+ */
+
 bool is_prime(int const num)
 {
    if (num <= 3)

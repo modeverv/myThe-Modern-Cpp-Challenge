@@ -64,3 +64,10 @@ int main()
       << std::endl;
 }
 */
+/*
+ ref: http://vivi.dyndns.org/tech/cpp/vector.html#vector
+ vectorの回し
+ for(auto itr = v.begin(); itr != v.end(); ++itr) {
+ *itr でイテレータの指す要素を参照
+ }
+ */

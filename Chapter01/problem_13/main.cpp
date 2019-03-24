@@ -3,6 +3,11 @@
 #include <algorithm>
 #include <array>
 
+/*
+ πの計算
+ π（円周率、PIと書く）の値を小数第2位までの精度で計算するプログラムを書きな
+ さい。
+ */
 template <
    typename E = std::mt19937, 
    typename D = std::uniform_real_distribution<>>
@@ -30,9 +35,22 @@ int main()
    std::seed_seq seq(std::begin(seed_data), std::end(seed_data));
    auto eng = std::mt19937{ seq };
    auto dist = std::uniform_real_distribution<>{ 0, 1 };
+   // ref https://cpprefjp.github.io/reference/random/uniform_real_distribution.html
 
    for (auto j = 0; j < 10; j++)
    {
-      std::cout << compute_pi(eng, dist) << std::endl;
+      std::cout << compute_pi(eng, dist,1000000) << std::endl;
    }
+   /*
+    3.14326
+    3.14354
+    3.1405
+    3.14231
+    3.13933
+    3.14252
+    3.14007
+    3.13896
+    3.14125
+    3.14152
+    */
 }

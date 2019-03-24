@@ -4,6 +4,12 @@
 #include <iterator>
 #include <algorithm>
 
+/*
+ 素因数分解
+ 与えられた正の整数の素因数分解を出力するプログラムを書きなさい。
+ */
+// ref long long https://cpprefjp.github.io/lang/cpp11/long_long_type.html
+
 std::vector<unsigned long long> prime_factors(unsigned long long n)
 {
    std::vector<unsigned long long> factors;
@@ -42,4 +48,5 @@ int main()
    std::copy(
       std::begin(factors), std::end(factors),
       std::ostream_iterator<unsigned long long>(std::cout, " "));
+   //https://cpprefjp.github.io/reference/iterator/ostream_iterator.html
 }

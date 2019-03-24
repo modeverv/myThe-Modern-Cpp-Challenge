@@ -1,6 +1,12 @@
 #include <iostream>
 #include <cmath>
 
+/*
+ 過剰数
+ 与えられた上限までのすべての過剰数（約数の総和がその数の2倍より大きい）とそ
+ の過剰を出力するプログラムを書きなさい。
+ */
+
 int sum_proper_divisors(int const number)
 {
    int result = 1;
