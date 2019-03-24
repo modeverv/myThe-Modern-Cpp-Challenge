@@ -4,6 +4,12 @@
 #include <iterator>
 #include <list>
 
+/*
+ 任意個数の要素をコンテナに追加
+ push_back(T&& value)メソッドを備えたコンテナの末尾に任意個数の要素を追加で
+ きる汎用の関数を書きなさい。
+ */
+
 template<typename C, typename... Args>
 void push_back(C& c, Args&&... args)
 {

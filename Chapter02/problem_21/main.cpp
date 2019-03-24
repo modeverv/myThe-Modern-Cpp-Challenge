@@ -67,6 +67,12 @@ int ReadFile(HANDLE,
 #include <algorithm>
 #include <vector>
 
+/*
+ システムハンドルラッパー
+ ファイルハンドルのようなOSのハンドルを考えます。ハンドルの取得と解放、ハン
+ ドルの正当性検証、あるオブジェクトから別のオブジェクトへのハンドルの所有権の移
+ 動などの演算を行うラッパーを書きなさい。
+ */
 template <typename Traits>
 class unique_handle
 {

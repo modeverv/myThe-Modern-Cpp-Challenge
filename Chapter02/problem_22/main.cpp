@@ -1,6 +1,13 @@
 #include <cmath>
 #include <assert.h>
 
+/*
+ さまざまな温度単位のリテラル
+ 温度をよく使われる3つの単位、摂氏、華氏、ケルビンで表示できて、相互に単位変
+ 換ができる小さなライブラリを書きなさい。このライブラリでは、温度リテラルを摂氏
+ は36.5_deg、華氏は97.7_f、ケルビンは309.65_Kと書き、これらの値で演算が行えて、
+ 相互に変換できるようにしなさい。
+ */
 bool are_equal(double const d1, double const d2, double const epsilon = 0.001)
 {
    return std::fabs(d1 - d2) < epsilon;

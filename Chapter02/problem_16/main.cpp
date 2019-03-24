@@ -2,6 +2,13 @@
 #include <array>
 #include <sstream>
 
+/*
+ 範囲内のIPv4アドレスを列挙する
+ IPv4アドレスの範囲を表すために2つのIPv4アドレスをユーザが入力し、その範囲
+ 内の全アドレスを列挙するプログラムを書きなさい。問題15で定義したクラスを拡張し
+ て、要求された機能を実装しなさい。
+ */
+
 class ipv4
 {
    std::array<unsigned char, 4> data;

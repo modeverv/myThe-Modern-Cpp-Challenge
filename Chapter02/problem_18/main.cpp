@@ -1,6 +1,12 @@
 #include <iostream>
 #include <functional>
 
+/*
+ 任意個数の引数を取る最小値関数
+ 任意個数の引数を取ることができて、その最小値を返す関数テンプレートを、比較
+ にoperator<演算子を使って書きなさい。operator<の代わりに、引数として与えられ
+ た2項比較関数を使う、この関数テンプレートの修正版も書きなさい。
+ */
 template <typename T>
 T minimum(T const a, T const b) { return a < b ? a : b; }
 

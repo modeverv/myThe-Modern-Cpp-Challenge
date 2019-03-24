@@ -3,6 +3,12 @@
 #include <algorithm>
 #include <iterator>
 
+/*
+ 基本演算を備えた2次元配列を作る
+ 要素へのアクセス（at()およびdata()）、容量クエリ、イテレータ、フィリング、スワッ
+ プといったメソッドを備えた2次元配列コンテナを表すクラステンプレートを書きなさ
+ い。この型のオブジェクトをムーブできるようにしなさい。
+ */
 template <class T, size_t R, size_t C>
 class array2d
 {
