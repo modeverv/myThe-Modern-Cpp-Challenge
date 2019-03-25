@@ -21,6 +21,8 @@ public:
    array2d() :arr(R*C) {}
    explicit array2d(std::initializer_list<T> l):arr(l) {}
    constexpr T* data() noexcept { return arr.data(); }
+   // https://cpprefjp.github.io/reference/vector/vector/data.html
+  // 配列の先頭へのポインタを返す。std::vector::data
    constexpr T const * data() const noexcept { return arr.data(); }
 
    constexpr T& at(size_t const r, size_t const c) 
@@ -99,6 +101,9 @@ int main()
    {
       std::cout << "test operator()" << std::endl;
       array2d<int, 2, 3> a;
+      // size_t
+      // https://cpprefjp.github.io/reference/cstddef/size_t.html
+      //size_tは、オブジェクトのバイト数を表現できる程度に十分に大きい符号なし整数型である。 C++03まではC言語と同じく「sizeof演算子によって返される符号なし整数型」と規定されていた。
 
       for (size_t i = 0; i < a.size(1); ++i)
       {
@@ -117,6 +122,7 @@ int main()
       array2d<int, 2, 3> a{10,20,30,40,50,60};
       print_array2d(a);
 
+      // TODO ムーブセマンティックスについては今度の時。。
       array2d<int, 2, 3> b(std::move(a));
       print_array2d(b);
    }

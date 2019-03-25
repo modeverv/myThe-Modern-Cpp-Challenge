@@ -81,9 +81,10 @@ public:
       return *this;
    }
 
+   //https://mickey24.hatenablog.com/entry/20081021/1224590753
    ipv4& operator++(int)
    {
-      ipv4 result(*this);
+//      ipv4 result(*this); // resultは変数名//必要？ // 特になくても動く感
       ++(*this);
       return *this;
    }
