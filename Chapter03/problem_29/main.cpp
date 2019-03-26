@@ -2,7 +2,14 @@
 #include <string_view>
 #include <regex>
 #include <assert.h>
-
+/*
+ ナンバープレートの検証
+ LLL-LL DDDまたはLLL-LL DDDDというフォーマット（LはAからZの大文字、Dは数字）
+ のナンバープレートを考えます。次の関数を書きなさい。
+ ● ナンバープレートが正しいフォーマットか検証する関数
+ ● 入力テキストから、ナンバープレートに相当する部分文字列すべてを取り出して
+ 返す関数
+ */
 bool validate_license_plate_format(std::string_view str)
 {
    std::regex rx(R"([A-Z]{3}-[A-Z]{2} \d{3,4})");

@@ -16,6 +16,8 @@ T1 minimum(T1 a, T... args)
    return minimum(a, minimum(args...));
 }
 
+// http://wisdom.sakura.ne.jp/programming/cpp/cpp34.html
+// template <class A,...
 template <class Compare, typename T>
 T minimumc(Compare comp, T const a, T const b) { return comp(a, b) ? a : b; }
 

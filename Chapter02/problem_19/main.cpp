@@ -13,6 +13,11 @@
 template<typename C, typename... Args>
 void push_back(C& c, Args&&... args)
 {
+  //C++17
+  // https://cpprefjp.github.io/lang/cpp17/folding_expressions.html
+  // 畳み込み式
+  // 概要
+  //畳み込み式 (fold expression) は可変引数テンプレートのパラメータパックに対して二項演算を累積的に行う (畳み込む fold)。
    (c.push_back(args), ...);
 }
 

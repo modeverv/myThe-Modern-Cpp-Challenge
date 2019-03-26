@@ -8,6 +8,12 @@
  は36.5_deg、華氏は97.7_f、ケルビンは309.65_Kと書き、これらの値で演算が行えて、
  相互に変換できるようにしなさい。
  */
+// Traits
+// https://qiita.com/rita0222/items/09e49723e3339ba5de24
+// https://cpprefjp.github.io/reference/type_traits.html
+/*
+
+ */
 bool are_equal(double const d1, double const d2, double const epsilon = 0.001)
 {
    return std::fabs(d1 - d2) < epsilon;
@@ -83,6 +89,24 @@ namespace temperature
    template <scale S, scale R>
    struct conversion_traits
    {
+   //https://cpprefjp.github.io/lang/cpp11/defaulted_and_deleted_functions.html
+   /*
+    = deleteは、特殊関数の暗黙定義を明示的に禁止するための機能である。これは、コピーを禁止するクラスを定義するような場合に使用する：
+
+    class X {
+    public:
+    // コピーは禁止するが、ムーブは許可する
+    X(const X&) = delete;
+    X& operator=(const X&) = delete;
+
+    // 特殊メンバ関数を明示的に定義もしくはdeleteした場合、
+    // それ以外の特殊メンバ関数は明示的に定義もしくはdefault宣言しなければ
+    // 暗黙定義されない
+    X(X&&) = default;
+    X() = default;
+    X& operator=(X&&) = default;
+    };
+    */
       static double convert(double const value) = delete;
    };
 

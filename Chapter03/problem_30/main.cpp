@@ -12,6 +12,12 @@ using boost::optional;
 using std::optional;
 #endif
 
+/*
+ URLパーツの抽出
+ URLを表す文字列に対して、パースしてURLの各パーツ（プロトコル、ドメイン、
+ ポート、パス、クエリ、フラグメント）を抽出する関数を書きなさい
+ */
+
 struct uri_parts
 {
    std::string           protocol;

@@ -2,6 +2,14 @@
 #include <sstream>
 #include <vector>
 #include <assert.h>
+/*
+ 区切り文字集合で文字列をトークンに分割する
+ 文字列と区切り文字の集合を入力として、区切り文字で分割したトークンを
+ std::vectorで返す関数を書きなさい。
+ 入力 "this is an example"
+ 区切り文字 ",.! "
+ 出力 { "this","is","an","example" }
+ */
 
 template <class Elem>
 using tstring = std::basic_string<Elem, std::char_traits<Elem>, std::allocator<Elem>>;

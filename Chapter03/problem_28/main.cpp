@@ -3,6 +3,11 @@
 #include <vector>
 #include <assert.h>
 
+/*
+ 最長回文部分文字列
+ 入力文字列に対して、最長の回文になっている部分文字列を返す関数を書きなさい。
+ もし、そのような部分文字列が複数個あるなら、最初の部分文字列を返しなさい。
+ */
 std::string longest_palindrome(std::string_view str)
 {
    size_t const len = str.size();

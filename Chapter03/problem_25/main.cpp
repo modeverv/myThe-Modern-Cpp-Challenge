@@ -2,7 +2,12 @@
 #include <sstream>
 #include <cctype>
 #include <assert.h>
-
+/*
+ 英文タイトルのキャピタライズ
+ 入力テキストをキャピタライズして、各単語が大文字で始まり残りは小文字になるよ
+ うに変換する関数を書きなさい。例えば、テキスト"the c++ challenger"を"The C++
+ Challenger"に変換します。
+ */
 template <class Elem>
 using tstring = std::basic_string<Elem, std::char_traits<Elem>, std::allocator<Elem>>;
 

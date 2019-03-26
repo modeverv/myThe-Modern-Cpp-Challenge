@@ -5,6 +5,14 @@
 #include <array>
 #include <assert.h>
 
+/*
+ バイナリから文字列への変換
+ 与えられた範囲（range）の8ビット整数の配列またはベクトルを16進表記の文字列で
+ 返す関数を書きなさい。16進は大文字または小文字が使えるようにしなさい。次に入
+ 力と出力の例を示します。
+ 入力 { 0xBA, 0xAD, 0xF0, 0x0D } 出力 "BAADF00D"または"baadf00d"
+ 入力 { 1,2,3,4,5,6 } 出力 "010203040506"
+ */
 template <typename Iter>
 std::string bytes_to_hexstr(Iter begin, Iter end, bool const uppercase = false)
 {

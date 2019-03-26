@@ -4,6 +4,13 @@
 #include <vector>
 #include <array>
 #include <assert.h>
+/*
+ 文字列からバイナリへの変換
+ 16進表記の文字列で入力して、それに対応する8ビット整数の数列を返す関数を書
+ きなさい。数列の内容はデシリアライズに相当します。次に例を示します。
+ 入力 "BAADF00D"または"baadf00d" 出力 { 0xBA, 0xAD, 0xF0, 0x0D }
+ 入力 "010203040506" 出力 { 1,2,3,4,5,6 }
+ */
 
 unsigned char hexchar_to_int(char const ch)
 {
