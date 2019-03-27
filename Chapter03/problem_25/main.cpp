@@ -9,6 +9,11 @@
  Challenger"に変換します。
  */
 template <class Elem>
+//https://cpprefjp.github.io/reference/string/basic_string.html
+//日本語扱うときはstd::wstringっぽい
+//https://qiita.com/javacommons/items/9ea0c8fd43b61b01a8da
+//UTF-8文字列リテラル
+//https://cpprefjp.github.io/lang/cpp11/utf8_string_literals.html
 using tstring = std::basic_string<Elem, std::char_traits<Elem>, std::allocator<Elem>>;
 
 template <class Elem>
@@ -46,7 +51,11 @@ int main()
    std::string text = "THIS IS an ExamplE, should wORk!";
    std::string expected = "This Is An Example, Should Work!";
    assert(expected == capitalize(text));
-   
+
+   //https://cpprefjp.github.io/reference/cassert/assert.html
+   //sってなに
+   // https://cpprefjp.github.io/reference/string/basic_string/op_s.html
+   // std::stringのリテラル
    assert(
           L"The C++ Challenger"s ==
           capitalize(L"the c++ challenger"s));

@@ -33,6 +33,8 @@ std::string bytes_to_hexstr(C const & c, bool const uppercase = false)
 int main()
 {
    std::vector<unsigned char> v{ 0xBA, 0xAD, 0xF0, 0x0D };
+   // https://cpprefjp.github.io/lang/cpp11/uniform_initialization.html
+   // 一様初期化
    std::array<unsigned char, 6> a{{ 1,2,3,4,5,6 }};
    unsigned char buf[5] = {0x11, 0x22, 0x33, 0x44, 0x55};
 

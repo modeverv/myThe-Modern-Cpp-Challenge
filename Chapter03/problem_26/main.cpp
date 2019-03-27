@@ -19,6 +19,7 @@ std::string join_strings(Iter begin, Iter end, char const * const separator)
 {
    std::ostringstream os;
    std::copy(begin, end-1, std::ostream_iterator<std::string>(os, separator));
+   //a,b,c => a,sep,b,sep,c,sepってやってるイメージ
    os << *(end-1);
    return os.str();
 }
