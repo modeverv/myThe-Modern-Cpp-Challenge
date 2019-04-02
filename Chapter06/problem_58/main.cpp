@@ -7,6 +7,12 @@
 #include <numeric>
 #include <string>
 
+/*
+ ノード間の最短経路
+ ノードのネットワークとノード間の距離が与えられたときに、指定されたノードから
+ 他の全ノード1つ1つへの最短経路と、そのときの始点から終点への経路を計算して表
+ 示するプログラムを書きなさい。入力には、次のような無向グラフを考えます。
+ */
 template <typename Vertex = int, typename Weight = double>
 class graph
 {

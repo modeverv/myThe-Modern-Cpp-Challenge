@@ -1,7 +1,11 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
-
+/*
+ 実行時間を測定する関数
+ 任意の個数の引数を持つ関数の実行時間を指定された時間単位（秒、ミリ秒、マイク
+ ロ秒など）で計測する関数を書きなさい。
+ */
 template <typename Time = std::chrono::microseconds,
    typename Clock = std::chrono::high_resolution_clock>
    struct perf_timer

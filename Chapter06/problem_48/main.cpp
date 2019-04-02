@@ -3,6 +3,14 @@
 #include <vector>
 #include <algorithm>
 
+
+/*
+ 要素列の最頻出要素
+ 与えられた要素列で、最頻出要素とその出現回数を返す関数を書きなさい。同
+ じ最大出現回数の要素が複数ある場合、すべての要素を返します。例えば、数列
+ {1,1,3,5,8,13,3,5,8,8,5}の場合、{5, 3}と{8, 3}を返します。
+ */
+
 template <typename T>
 std::vector<std::pair<T, size_t>> find_most_frequent(std::vector<T> const & range)
 {

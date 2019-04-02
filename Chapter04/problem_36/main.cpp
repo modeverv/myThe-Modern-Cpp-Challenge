@@ -13,7 +13,13 @@ namespace fs = std::experimental::filesystem;
 namespace fs = std::filesystem;
 #  endif
 #endif
-
+/*
+指定日付より古いファイルを削除する
+ディレクトリへのパスと時刻が指定されたときに、そのディレクトリ内の指定時刻よ
+り古いエントリ（ファイルまたはサブディレクトリ）を再帰的にすべて削除する関数を書
+きなさい。時刻は、日、時間、分、秒あるいは1時間25分などの組み合わせで表します。
+指定されたディレクトリそのものが指定時刻より古ければ、全体を削除します。
+ */
 namespace ch = std::chrono;
 
 template <typename Duration>

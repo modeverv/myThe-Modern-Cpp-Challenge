@@ -2,6 +2,18 @@
 #include <vector>
 #include <assert.h>
 
+/*
+ リングバッファ
+ 固定長のリングバッファ（ring buffer, circular buffer）を表すデータ構造を作りなさ
+ い。リングバッファでは、固定サイズを超えて要素が追加されると既存の要素を上書き
+ します。クラスには次の機能が含まれます。
+ ● デフォルトコンストラクタを禁止する
+ ● 指定したサイズのオブジェクトの作成をサポートする
+ ● バッファの容量と状態をチェックする（empty(), full(), size(), capacity()）
+ ● 新しい要素の追加、これはバッファ内の最も古い要素を上書きする可能性がある
+ ● バッファ内の最も古い要素を削除する
+ ● 要素についてのイテレーションのサポート
+ */
 template <class T>
 class circular_buffer;
 
@@ -13,6 +25,7 @@ class circular_buffer_iterator
    typedef T&                                reference;
    typedef T const&                          const_reference;
    typedef T*                                pointer;
+   // https://ja.cppreference.com/w/cpp/iterator/iterator_tags
    typedef std::random_access_iterator_tag   iterator_category;
    typedef ptrdiff_t                         difference_type;
 public:

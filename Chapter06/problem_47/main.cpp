@@ -6,6 +6,14 @@
 #include <mutex>
 #include <iterator>
 
+/*
+ ダブルバッファ
+ 読み書き2つの操作が衝突することなく、同時に読み書きできるバッファを表すクラ
+ スを書きなさい。書き出し操作が進行中にも読み込み操作が古いデータへアクセスで
+ きるようにする必要があります。新しい書き込みデータは、書き出し操作の完了後には
+ 読み取り可能でなければなりません。
+ */
+
 template <typename T>
 class double_buffer
 {
@@ -24,6 +32,16 @@ public:
    {
       std::unique_lock<std::mutex> lock(mt);
       auto length = std::min(size, wrbuf.size());
+   /*
+    https://cpprefjp.github.io/reference/algorithm/copy.html
+    指定された範囲の要素をコピーする。
+    namespace std {
+    template <class InputIterator, class OutputIterator>
+    OutputIterator
+    copy(InputIterator first,
+    InputIterator last,
+    OutputIterator result);   // (1) C++03 
+    */
       std::copy(ptr, ptr + length, std::begin(wrbuf));
       wrbuf.swap(rdbuf);
    }
@@ -31,6 +49,9 @@ public:
    template <class Output>
    void read(Output it) const
    {
+   /*
+   https://cpprefjp.github.io/reference/mutex/unique_lock.html このクラスは通常、メンバ変数もしくはグローバル変数としてもつミューテックスオブジェクトに対し、関数内の先頭でlock()、関数を抜ける際にunlock()を確実に呼び出すために使用される。この手法は、Scoped Locking Patternとして知られている。
+    */
       std::unique_lock<std::mutex> lock(mt);
       std::copy(std::cbegin(rdbuf), std::cend(rdbuf), it);
    }

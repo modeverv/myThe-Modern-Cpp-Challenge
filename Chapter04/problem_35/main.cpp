@@ -15,6 +15,11 @@ namespace fs = std::filesystem;
 #  endif
 #endif
 
+/*
+ ディレクトリのサイズを計算する
+ ディレクトリのサイズを再帰的に計算してバイト単位で返す関数を書きなさい。シン
+ ボリックリンクはたどるかどうか指定できるようにしなさい。
+ */
 std::uintmax_t get_directory_size(
    fs::path const & dir,
    bool const follow_symlinks = false)
@@ -28,6 +33,8 @@ std::uintmax_t get_directory_size(
       dir,
       follow_symlinks ? fs::directory_options::follow_directory_symlink : fs::directory_options::none);
 #endif
+//0ull ull unsigned long long
+  //https://cpprefjp.github.io/lang/cpp11/long_long_type.html
 
    return std::accumulate(
       fs::begin(iterator), fs::end(iterator),

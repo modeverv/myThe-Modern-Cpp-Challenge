@@ -1,6 +1,14 @@
 #include <iostream>
 #include <vector>
 
+/*
+ Zipアルゴリズム
+ 2つの入力列に対して、それぞれの列の要素をペアにした新たな列を返す関数を書
+ きなさい。これをZipと言います。2つの入力列の長さが異なる場合には、短いほうの
+ 列の要素をすべて含むようにします。例えば、入力列が{ 1, 2, 3, 4, 5, 6, 7, 8,
+ 9, 10 }と{ 1, 1, 3, 5, 8, 13, 21 }ならば、結果は{ {1,1}, {2,1}, {3,3}, {4,5},
+ {5,8}, {6,13}, {7,21} }となります。
+ */
 template <typename Input1, typename Input2, typename Output>
 void zip(
    Input1 begin1, Input1 end1, 

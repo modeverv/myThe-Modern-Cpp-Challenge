@@ -12,6 +12,10 @@
  */
 bool validate_license_plate_format(std::string_view str)
 {
+   // https://cpprefjp.github.io/reference/regex.html
+   // https://qiita.com/kmikmy/items/6ac1f54b64a307b5b941
+   // https://codezine.jp/article/detail/7716
+   // 正規表現
    std::regex rx(R"([A-Z]{3}-[A-Z]{2} \d{3,4})");
    return std::regex_match(str.data(), rx);
 }

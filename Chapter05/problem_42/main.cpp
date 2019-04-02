@@ -1,7 +1,11 @@
 #include <iostream>
 #include "date.h"
 #include "iso_week.h"
-
+/*
+ 年間の日と週
+ 与えられた日付が、1年の何日目か（1から365まで、うるう年は366まで）を返す関数
+ と、同じ入力に対して1年の何週目かを返す関数を書きなさい。
+ */
 unsigned int calendar_week(int const y, unsigned int const m, unsigned int const d)
 {
    using namespace date;

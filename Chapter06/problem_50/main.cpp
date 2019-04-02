@@ -4,6 +4,13 @@
 #include <iostream>
 #include <algorithm>
 
+/*
+ 電話番号のリストをフィルタリング
+ 与えられた電話番号のリストから、指定された国の電話番号だけを返す関数を書き
+ なさい。国は、国際電話の国番号で（例えば英国の場合は44）示します。電話番号は、
+ 国番号、+国番号、あるいは国番号なしで始まる場合があります。国番号のない電話番
+ 号は無視します。
+ */
 bool starts_with(std::string_view str, std::string_view prefix)
 {
    return str.find(prefix) == 0;

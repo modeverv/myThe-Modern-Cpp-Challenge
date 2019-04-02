@@ -1,6 +1,16 @@
 #include <iostream>
 #include "date.h"
 
+// date.hどこのあるの問題
+// とりまfindしてみる
+// find / -name "date.h"
+// /Users/seijiro/GoogleDrive/code/C:C++/myThe-Modern-Cpp-Challenge/libs/date/include/date/date.h
+/*
+ 2つの日付間の日数
+ 与えられた2つの日付の間の日数を返す関数を書きなさい。関数は、日付の入力順に
+ 関係なく求められるようにしなさい
+ */
+
 inline int number_of_days(
    int const y1, unsigned int const m1, unsigned int const d1,
    int const y2, unsigned int const m2, unsigned int const d2)

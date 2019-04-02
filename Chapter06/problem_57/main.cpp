@@ -9,6 +9,13 @@
 #include <chrono>
 #include <assert.h>
 
+/*
+ ソートアルゴリズム
+ 上限と下限を定義するランダムアクセスイテレータのペアが与えられたときに、ク
+ イックソートアルゴリズムを使って、その範囲内の要素をソートする関数を書きなさい。
+ ソート関数には、operator<を使って要素を比較し昇順に並び替えるものと、要素比較
+ にユーザ定義の比較関数を使うものとの2つのオーバーロード関数を書きなさい。
+ */
 template <class RandomIt>
 RandomIt partition(RandomIt first, RandomIt last)
 {

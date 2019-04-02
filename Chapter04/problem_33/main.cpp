@@ -4,6 +4,24 @@
 #include <vector>
 #include <algorithm>
 
+/*
+ プロセスのリストを表形式で出力する
+ システムの全プロセスのスナップショットのリストがあるとします。各プロセスの情
+ 報には、名前、識別子、ステータス（runningかsuspendedのどちらか）、アカウント名
+ （この下でプロセスが実行される）、メモリサイズ（バイト）、プラットフォーム（32ビッ
+ トか64ビット）があります。そのようなプロセスのリストが与えられたときに、表形式
+ でアルファベット順にコンソールに出力する関数を書きなさい。メモリサイズは右揃え
+ で、それ以外の各列は左揃えです。メモリサイズは、KB単位で出力します。この関数
+ の出力例を次に示します。
+ chrome.exe 1044 Running marius.bancila 25180 32-bit
+ chrome.exe 10100 Running marius.bancila 227756 32-bit
+ cmd.exe 512 Running SYSTEM 48 64-bit
+ explorer.exe 7108 Running marius.bancila 29529 64-bit
+ skype.exe 22456 Suspended marius.bancila 656 64-bit
+ */
+//https://cpprefjp.github.io/lang/cpp11/scoped_enum.html
+//http://vivi.dyndns.org/tech/cpp/enum-class.html
+//スコープを持つ列挙型
 enum class procstatus {suspended, running};
 std::string status_to_string(procstatus const status)
 {
@@ -30,6 +48,10 @@ struct procinfo
 
 void print_processes(std::vector<procinfo> processes)
 {
+  //https://ja.cppreference.com/w/cpp/algorithm/sort
+  // sort using a lambda expression
+  //https://cpprefjp.github.io/lang/cpp11/lambda_expressions.html
+  //[キャプチャリスト](パラメータリスト) mutable 例外仕様 属性 -> 戻り値の型 { 関数の本体 }
    std::sort(
       std::begin(processes), std::end(processes),
       [](procinfo const & p1, procinfo const & p2) {

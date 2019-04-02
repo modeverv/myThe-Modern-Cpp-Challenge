@@ -6,6 +6,11 @@
 #include "date.h"
 #include "tz.h"
 
+/*
+ 複数のタイムゾーンにおける打ち合わせ時刻
+ 打ち合わせの参加者とそのタイムゾーンのリストが与えられたときに、打ち合わせ時
+ 刻を各参加者のローカルタイムで表示する関数を書きなさい。
+ */
 namespace ch = std::chrono;
 
 struct user

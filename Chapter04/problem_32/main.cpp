@@ -2,6 +2,10 @@
 #include <iostream>
 #include <cmath>
 
+/*
+ パスカルの三角形
+ パスカルの三角形を10行目までコンソールに出力する関数を書きなさい。
+ */
 unsigned int number_of_digits(unsigned int const i)
 {
    return i > 0 ? (int)log10((double)i) + 1 : 1;

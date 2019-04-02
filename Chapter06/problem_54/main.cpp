@@ -1,6 +1,13 @@
 #include <iostream>
 #include <vector>
 
+/*
+ ペア作成アルゴリズム
+ 要素列が与えられたときに、入力列の要素を2つずつペアにした新たな列を返す汎用
+ 関数を書きなさい。入力列が奇数個の要素の場合は、末尾の要素を無視します。例え
+ ば、入力列が{1, 1, 3, 5, 8, 13, 21}ならば、結果は{ {1, 1}, {3, 5}, {8, 13} }
+ となります。
+ */
 template <typename Input, typename Output>
 void pairwise(Input begin, Input end, Output result)
 {

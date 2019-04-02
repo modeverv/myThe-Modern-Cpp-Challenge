@@ -2,6 +2,12 @@
 #include <string>
 #include <algorithm>
 
+/*
+ 文字列の文字の順列を生成
+ 与えられた文字列を文字に分解して並び替え、すべての順列をコンソールに出力す
+ る関数を書きなさい。この関数では、再帰を使ったものと使わないものの2つのバー
+ ジョンを作りなさい。
+ */
 void print_permutations(std::string str)
 {
    std::sort(std::begin(str), std::end(str));

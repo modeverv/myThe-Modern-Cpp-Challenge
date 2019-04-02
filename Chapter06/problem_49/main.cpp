@@ -6,6 +6,13 @@
 #include <string>
 #include <string_view>
 
+/*
+ テキストヒストグラム
+ 与えられた英語のテキストで、各英字の出現割合を求めてヒストグラムを出力する
+ プログラムを書きなさい。頻度は全英字数に対する各英字の出現回数の割合です。プ
+ ログラムは、英字だけを計測して、数字、記号、その他の文字を無視します。頻度は、
+ テキストサイズではなく全英字数に対する割合です。
+ */
 std::map<char, double> analyze_text(std::string_view text)
 {
    std::map<char, double> frequencies;

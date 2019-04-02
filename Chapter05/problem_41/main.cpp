@@ -3,6 +3,11 @@
 #include "date.h"
 #include "iso_week.h"
 
+/*
+ 曜日
+ 与えられた日付の曜日を求める関数を書きなさい。この関数は1（月曜）から7（日曜）
+ の間の値を返します。
+ */
 unsigned int week_day(int const y, unsigned int const m, unsigned int const d)
 {
    using namespace date;
