@@ -38,6 +38,10 @@ std::vector<std::string> filter_numbers(
    std::vector<std::string> const & numbers,
    std::string const & countryCode)
 {
+  //https://cpprefjp.github.io/reference/iterator/cbegin.html
+  /*
+   範囲から先頭要素への読み取り専用イテレータを取得する。
+   */
    return filter_numbers(
       std::cbegin(numbers), std::cend(numbers), 
       countryCode);

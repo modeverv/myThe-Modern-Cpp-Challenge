@@ -18,6 +18,16 @@ std::vector<std::pair<T, size_t>> find_most_frequent(std::vector<T> const & rang
 
    for (auto const & e : range) counts[e]++;
 
+  // https://qiita.com/_EnumHack/items/f462042ec99a31881a81
+  /*
+   std::pair
+   std::pairとは以下のように２つの値を保持するアグリゲートクラスである.
+   template < class First, class Second >
+   struct pair{
+   First first;
+   Second second;
+   };
+   */
    auto maxelem = std::max_element(
       std::cbegin(counts), std::cend(counts),
       [](auto const & e1, auto const & e2) {
